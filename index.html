@@ -9,6 +9,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Survey</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <header>
+            <h1 id="title">Survey</h1>
+        </header>
+
+        <p id="description">Help Improve Free Code Camp.</p>
+
+        <form id="survey-form" class="shadow">
+
+            <!-- Personal Details -->
+
+            <div class="row">
+                <div class="row-cell">
+                    <label for="name" id="name-label">* Name</label>
+                </div>
+                <div class="row-cell">
+                    <input type="text" id="name" placeholder="Please enter your full name." required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-cell">
+                    <label for="email" id="email-label">* Email</label>
+                </div>
+                <div class="row-cell">
+                    <input type="email" id="email" placeholder="Please enter a valid email." required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-cell">
+                    <label for="number" id="number-label">* Age</label>
+                </div>
+                <div class="row-cell">
+                    <input type="number" id="number" min="0" max="125" placeholder="Please enter your age.">
+                </div>
+            </div>
+
+            <!-- Dropdown 1 -->
+            <div class="row">
+                <div class="row-cell">
+                    <div>Which option best describes your current role?</div>
+                </div>
+                <div class="row-cell">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">Select</button>
+                        <button type="button" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                        <div class="dropdown-menu" id="dropdown">
+                            <option class="dropdown-item" value="Student" href="#">Student</option>
+                            <option class="dropdown-item" value="Full Time Job" href="#">Full Time Job</option>
+                            <option class="dropdown-item" value="Full Time Learner" href="#">Full Time Learner</option>
+                            <option class="dropdown-item" value="Prefer Not To Say" href="#">Prefer Not To Say</option>
+                            <div class="dropdown-divider" value=""></div>
+                            <option class="dropdown-item" href="#" value="Other">Other</option>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="row">
+                <div class="row-cell">
+                    <div id="radio-question1">
+                        <label for="recommendation">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+                    </div>
+                </div>
+                <div class="row-cell">
+                    <div id="radio">
+                        <label><input type="radio" name="recommendation" value="Definitely"> Definitely</label>
+                        <label><input type="radio" name="recommendation" value="Maybe"> Maybe</label>
+                        <label><input type="radio" name="recommendation" value="not-sure"> Not Sure</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkboxes -->
+            <div class="row">
+                <div class="row-cell">
+                    <label for="checkboxes">Things that should be improved in the future
+(Check all that apply):</label>
+                </div>
+                <div class="row-cell">
+                    <div id="checkboxes">
+                        <label><input type="checkbox" name="improvements" value="Front-end Projects"> Front-end Projects</label>
+                        <label><input type="checkbox" name="improvements" value="Back-end Projects"> Back-end Projects</label>
+                        <label><input type="checkbox" name="improvements" value="Data Visualization"> Data Visualization</label>
+                        <label><input type="checkbox" name="improvements" value="Challenges"> Challenges</label>
+                        <label><input type="checkbox" name="improvements" value="Open Source Community"> Open Source Community</label>
+                        <label><input type="checkbox" name="improvements" value="Gitter help rooms</"> Gitter help rooms</label>
+                        <label><input type="checkbox" name="improvements" value="Videos"> Videos</label>
+                        <label><input type="checkbox" name="improvements" value="City Meetups"> City Meetups</label>
+                        <label><input type="checkbox" name="improvements" value="Wiki"> Wiki</label>
+                        <label><input type="checkbox" name="improvements" value="Forum"> Forum</label>
+                        <label><input type="checkbox" name="improvements" value="Additional Courses"> Additional Courses</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Area -->
+            <div class="row">
+                <div class="row-cell">
+                    <label for="textarea">Any Comments or Suggestions?</label>
+                </div>
+                <div class="row-cell">
+                    <textarea id="textarea" placeholder="Enter your comment here..."></textarea>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div id="submit-row">
+                <button id="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+        </form>
+        <footer>
+
+        </footer>
+
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS Try Bottom -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -17,51 +151,21 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    
 
-</head>
+    <script>
+        
+        $(function() {
 
-<body>
+            $(".dropdown-menu option").click(function() {
+                $(".btn:first-child").text($(this).text());
+                $(".btn:first-child").val($(this).text());
+            });
 
-    <!-- Name and logo -->
-    <header>
+        }); 
+        
+    </script>
 
-    </header>
-
-    <!-- Navigation Links -->
-    <nav>
-
-    </nav>
-
-    <!-- Primary Webpage Content (Max of 1) -->
-    <main>
-
-    </main>
-
-    <!-- Footer Content -->
-    <footer>
-
-    </footer>
-
-    <!-- Specific Content Grouping -->
-    <section>
-
-    </section>
-
-    <!-- Forums, Blogs ... -->
-    <article>
-
-    </article>
-
-    <!-- Information About Nearby Content.  Sidebar ... -->
-    <aside>
-
-    </aside>
-
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

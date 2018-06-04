@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    min-height: 100vh;
+}
+
+#survey-form {
+    background-color: lightgray;
+    padding: 10px 0 20px 0;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    border: 2px black solid;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#description {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+}
+
+.row-cell {
+    flex: 1;
+    padding-left: 30px;
+    margin: 20px 0 20px 0;
+}
+
+input {
+    min-width: 25vw;
+}
+
+#submit-row {
+    display: flex;
+    justify-content: center;
+}
+
+#radio {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+#textarea {
+    min-width: 25vw;
+}
